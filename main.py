@@ -1,6 +1,7 @@
 import streamlit as st
+from scanner_ui import run_kiosko_scanner
 
-st.sidebar.title("calculadora ICI")
+st.sidebar.title("App Multitarea")
 
 def operacion_suma():
 
@@ -39,11 +40,13 @@ def opcion_acercade():
     st.write("UCOL-FIME_ICI")
 
 opcion = st.sidebar.selectbox("Opciones", [
-    "Suma", "Resta", "Multiplicacion", "Division", "Acerca de"
+    "Escáner Kiosko 24/7", "Suma", "Resta", "Multiplicacion", "Division", "Acerca de"
     ])
 
 
 match opcion:
+    case "Escáner Kiosko 24/7":
+        run_kiosko_scanner()
     case "Suma":
         st.write("Esta es la opcion de suma... ")
         operacion_suma()
