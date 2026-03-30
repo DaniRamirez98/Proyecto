@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosko 24/7 Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="k">K</span>iosko <span class="tagline">24/7</span>
+            </div>
+            <h1>Escáner de Precios</h1>
+        </header>
+
+        <main>
+            <div id="reader-container">
+                <div id="reader"></div>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <div class="product-card">
+                    <h2 id="product-name">Nombre del Producto</h2>
+                    <p class="category" id="product-category">Categoría</p>
+                    <div class="price-box">
+                        <span class="currency">$</span>
+                        <span id="product-price">0.00</span>
+                        <span class="mxn">MXN</span>
+                    </div>
+                    <button id="scan-again">Escanear otro</button>
+                </div>
+            </div>
+
+            <div class="test-codes">
+                <h3>Códigos de prueba:</h3>
+                <p>7501055300071 (Coca-Cola)</p>
+                <p>7501011115124 (Papas Fritas)</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Kiosko 24/7 - Consulta de Precios</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
